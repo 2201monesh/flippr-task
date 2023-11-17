@@ -1,23 +1,16 @@
-import { useEffect } from "react";
+import React from 'react';
+import NobelPrizeList from './NobelPrizeList';
+import MultipleTimeWinners from './MultipleTimeWinners';
 
 
-function App() {
-
-  const getData = async () => {
-    const url = await fetch("http://api.nobelprize.org/v1/prize.json");
-    const response = await url.json();
-    console.log(data);
-  }
-  
-  useEffect(() => {
-    getData()
-  }, []);
+const App = () => {
 
   return (
-    <div className="App">
-      hello
+    <div className='app'>
+      <NobelPrizeList />
+      <MultipleTimeWinners />
     </div>
   );
-}
+};
 
 export default App;

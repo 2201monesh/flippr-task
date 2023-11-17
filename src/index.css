@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  flex-direction: column;
+}
+
+.main-heading{
+  padding: 12px;
+}
+
+.category, .year, .list-items{
+  padding: 12px;
+}
+
+.item{
+  padding: 4px;
+}
+
+.year-select, .category-select{
+  margin-left: 8px;
+}
