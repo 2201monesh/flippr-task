@@ -3,12 +3,15 @@ import { useEffect } from "react";
 
 function App() {
 
-  const apiRequest = async () => {
-    const apiCall = await fetch("http://api.nobelprize.org/v1/prize.json");
-    const data = await apiCall.json();
+  const getData = async () => {
+    const url = await fetch("http://api.nobelprize.org/v1/prize.json");
+    const response = await url.json();
     console.log(data);
   }
-  apiRequest();
+  
+  useEffect(() => {
+    getData()
+  }, []);
 
   return (
     <div className="App">
